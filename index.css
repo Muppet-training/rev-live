@@ -42,26 +42,37 @@ div {
 
 .p1 {
 	grid-area: p1;
+	z-index: 1;
 }
 
 .p2 {
 	grid-area: p2;
+	z-index: 1;
 }
 
 .p3 {
 	grid-area: p3;
+	z-index: 1;
 }
 
 .p4 {
 	grid-area: p4;
+	z-index: 1;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #8186f5;
+	text-align: center;
+	z-index: 0;
 }
 
 @media (max-width: 479px) {
 	body {
 		grid-template-areas: 'header' 'one' 'p1' 'two' 'p2' 'three'
-			'p3' 'four' 'p4';
+			'p3' 'four' 'p4' 'footer';
 		grid-auto-rows: 50px 200px auto 200px auto 200px auto 200px
-			auto;
+			auto 500px;
 	}
 
 	.p1,
@@ -79,8 +90,8 @@ div {
 
 @media (min-width: 480px) and (max-width: 767px) {
 	body {
-		grid-template-areas: 'header header''one two' 'top-content top-content' 'three four' 'bottom-content bottom-content';
-		grid-auto-rows: 150px 300px auto 300px auto;
+		grid-template-areas: 'header header''one two' 'top-content top-content' 'three four' 'bottom-content bottom-content' 'footer footer';
+		grid-auto-rows: 150px 300px auto 300px auto 500px;
 	}
 
 	.p1,
@@ -114,7 +125,8 @@ div {
 	.p1,
 	.p2,
 	.p3,
-	.p4 {
+	.p4,
+	.footer {
 		grid-area: content;
 		display: none;
 		height: 0px;

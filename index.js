@@ -28,7 +28,7 @@ window.addEventListener('load', function() {
 					contentId = 'p4';
 					break;
 				default:
-					contentId = 'one';
+					contentId = 'footer';
 			}
 			let content = document.getElementById(contentId);
 			console.log(content);
