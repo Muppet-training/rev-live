@@ -3,16 +3,24 @@ body {
 	height: 100vh;
 	grid-auto-columns: auto;
 	grid-auto-rows: auto;
-	grid-gap: 10px;
+	grid-gap: 1px;
 	background-color: #3e78af;
 	/* default layout for mobile */
-	grid-template-areas: 'one' 'p1' 'two' 'p2' 'three' 'p3' 'four'
-		'p4';
+	grid-template-areas: 'header' 'one' 'p1' 'two' 'p2' 'three' 'p3'
+		'four' 'p4';
+	margin: 0px;
+	padding: 0px;
 }
 
 /* just for cleaarer display */
 div {
 	background-color: #c2c5ff;
+	text-align: center;
+}
+
+.header {
+	grid-area: header;
+	background-color: #8186f5;
 	text-align: center;
 }
 
@@ -48,36 +56,59 @@ div {
 	grid-area: p4;
 }
 
+@media (max-width: 479px) {
+	body {
+		grid-template-areas: 'header' 'one' 'p1' 'two' 'p2' 'three'
+			'p3' 'four' 'p4';
+		grid-auto-rows: 50px 200px auto 200px auto 200px auto 200px
+			auto;
+	}
+
+	.p1,
+	.p2,
+	.p3,
+	.p4 {
+		display: none;
+		height: 0px;
+	}
+	.active {
+		display: block;
+		min-height: 400px;
+	}
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
 	body {
-		grid-template-areas: 'one two' 'top-content top-content'
-			'three four' 'bottom-content bottom-content';
-		grid-auto-rows: 300px minmax(350px, auto) 300px
-			minmax(350px, auto);
+		grid-template-areas: 'header header''one two' 'top-content top-content' 'three four' 'bottom-content bottom-content';
+		grid-auto-rows: 150px 300px auto 300px auto;
 	}
 
 	.p1,
 	.p2 {
 		grid-area: top-content;
 		display: none;
+		height: 0px;
 	}
 
 	.p3,
 	.p4 {
 		grid-area: bottom-content;
 		display: none;
+		height: 0px;
 	}
 
-	.p3 {
+	.active {
 		display: block;
+		min-height: 400px;
 	}
 }
 
 @media (min-width: 767px) {
 	body {
 		grid-template-columns: 300px auto;
-		grid-template-areas: 'one content' 'two content'
-			'three content' 'four content';
+		grid-template-areas: 'header content' 'one content'
+			'two content' 'three content' 'four content';
+		grid-template-rows: 50px auto auto auto auto;
 	}
 
 	.p1,
@@ -86,10 +117,12 @@ div {
 	.p4 {
 		grid-area: content;
 		display: none;
+		height: 0px;
 	}
 
 	/* All of them stack at the same space. need to only show one, e.g. only p1 */
-	.p2 {
+	.active {
 		display: block;
+		height: 100vh;
 	}
 }
