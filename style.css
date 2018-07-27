@@ -21,21 +21,12 @@ a {
 body {
   display: -ms-grid;
   display: grid;
-  height: 100vh;
   grid-auto-columns: auto;
   grid-auto-rows: auto;
-  grid-gap: 1px;
-  background-color: #3e78af;
   /* default layout for mobile */
       grid-template-areas: 'header' 'one' 'p1' 'two' 'p2' 'three' 'p3' 'four' 'p4' 'five' 'p5' 'six' 'p6' 'pitch';
   margin: 0px;
   padding: 0px;
-}
-
-/* just for cleaarer display */
-div {
-  background-color: #c2c5ff;
-  text-align: center;
 }
 
 .header {
@@ -43,7 +34,7 @@ div {
   -ms-grid-column: 1;
   grid-area: header;
   background-color: #fff;
-  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .one {
@@ -134,29 +125,25 @@ div {
   -ms-grid-row: 14;
   -ms-grid-column: 1;
   grid-area: pitch;
-  background-color: #e0e0e0;
-  text-align: center;
   z-index: 0;
 }
 
 .work_form {
   grid-area: work_form;
   background-color: #292929;
-  text-align: center;
   color: #e0e0e0;
 }
 
 .footer {
   grid-area: footer;
   background-color: #000;
-  text-align: center;
   color: #e0e0e0;
 }
 
 @media (max-width: 479px) {
   body {
         grid-template-areas: 'header' 'pitch' 'one' 'p1' 'two' 'p2' 'three' 'p3' 'four' 'p4' 'five' 'p5' 'six' 'p6' 'work_form' 'footer';
-    grid-auto-rows: 50px 500px 200px auto 200px auto 200px auto 200px auto 200px auto 200px auto 100px 20px;
+    grid-auto-rows: 50px minmax(400px, auto) 75px auto 75px auto 75px auto 75px auto 75px auto 75px auto 100px 20px;
   }
   .p1,
   .p2,
@@ -176,7 +163,7 @@ div {
 @media (min-width: 480px) and (max-width: 767px) {
   body {
         grid-template-areas: 'header header' 'pitch pitch' 'one two' 'top-content top-content' 'three four' 'middle-content middle-content' 'five six' 'bottom-content bottom-content' 'work_form work_form' 'footer footer';
-    grid-auto-rows: 50px 500px 300px auto 300px auto 300px auto 100px 20px;
+    grid-auto-rows: 50px minmax(400px, auto) 150px auto 150px auto 150px auto 100px 20px;
   }
   .p1,
   .p2 {
@@ -211,13 +198,13 @@ div {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   body {
     -ms-grid-columns: 300px auto;
         grid-template-columns: 300px auto;
-        grid-template-areas: 'header content' 'one content' 'two content' 'three content' 'four content' 'five content' 'six content' 'work_form work_form' 'footer footer';
-    -ms-grid-rows: 50px auto auto auto auto auto auto 100px 20px;
-        grid-template-rows: 50px auto auto auto auto auto auto 100px 20px;
+        grid-template-areas: 'header content' 'one content' 'two content' 'three content' 'four content' 'five content' 'six content' '... content' 'work_form work_form' 'footer footer';
+    -ms-grid-rows: 50px 150px 150px 150px 150px 150px 150px auto 100px 20px;
+        grid-template-rows: 50px 150px 150px 150px 150px 150px 150px auto 100px 20px;
   }
   .p1,
   .p2,
@@ -227,7 +214,7 @@ div {
   .p6,
   .pitch {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 7;
+    -ms-grid-row-span: 8;
     -ms-grid-column: 2;
     grid-area: content;
     display: none;
@@ -236,7 +223,7 @@ div {
   /* All of them stack at the same space. need to only show one, e.g. only p1 */
   .active {
     display: block;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -271,9 +258,207 @@ ul {
   font-size: 14px;
 }
 
-.author {
+.top_right_link {
   line-height: 54px;
   font-weight: 100;
   margin-right: 10px;
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
+  line-height: 85px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .toggle {
+    line-height: 160px;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle {
+    line-height: 155px;
+  }
+}
+
+.toggle .icon {
+  width: 80px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .toggle .icon {
+    width: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle .icon {
+    width: 90px;
+  }
+}
+
+.toggle .icon i {
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .toggle .icon i {
+    padding-left: 15px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle .icon i {
+    font-size: 45px;
+  }
+}
+
+.toggle span {
+  font-weight: 100;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 32px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .toggle span {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .toggle span {
+    font-size: 35px;
+  }
+}
+
+.tab_header {
+  height: 50px;
+}
+
+.tab_header p {
+  text-align: right;
+}
+
+.the_pitch {
+  background: url("./images/the_pitch.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+@media (min-width: 768px) {
+  .the_pitch {
+    height: 100vh;
+  }
+}
+
+.the_pitch .top_right_link {
+  padding-top: 8px;
+}
+
+.the_pitch .contact {
+  background-color: rgba(250, 50, 37, 0.85);
+  padding: 10px 20px;
+  border: 3px solid white;
+  border-radius: 50px 16px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 400;
+}
+
+.the_pitch h1 {
+  text-align: center;
+  padding: 40px 20px 50px;
+  font-weight: 400;
+  font-size: 24px;
+  max-width: 400px;
+  margin: auto;
+  line-height: 30px;
+}
+
+@media (min-width: 768px) {
+  .the_pitch h1 {
+    font-size: 32px;
+    max-width: 525px;
+    padding: 100px 20px 75px;
+    line-height: 42px;
+  }
+}
+
+.the_pitch h3 {
+  text-align: center;
+  font-weight: 100;
+  padding: 0 20px;
+  max-width: 400px;
+  margin: auto;
+  line-height: 25px;
+}
+
+@media (min-width: 768px) {
+  .the_pitch h3 {
+    font-size: 21px;
+    max-width: 525px;
+  }
+}
+
+.our_clients h4 {
+  font-size: 28px;
+  font-weight: 100;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .our_clients h4 {
+    padding: 100px 20px 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .our_clients h4 {
+    font-size: 35px;
+  }
+}
+
+.our_clients .client_logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.our_clients .client_logo {
+  color: #343434;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 2px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .our_clients .client_logo {
+    font-size: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .our_clients .client_logo {
+    font-size: 35px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

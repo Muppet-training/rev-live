@@ -29,11 +29,9 @@ a {
 
 body {
 	display: grid;
-	height: 100vh;
 	grid-auto-columns: auto;
 	grid-auto-rows: auto;
-	grid-gap: 1px;
-	background-color: #3e78af;
+	// grid-gap: 1px;
 	/* default layout for mobile */
 	grid-template-areas: 'header' 'one' 'p1' 'two' 'p2' 'three' 'p3'
 		'four' 'p4' 'five' 'p5' 'six' 'p6' 'pitch';
@@ -41,16 +39,10 @@ body {
 	padding: 0px;
 }
 
-/* just for cleaarer display */
-div {
-	background-color: #c2c5ff;
-	text-align: center;
-}
-
 .header {
 	grid-area: header;
 	background-color: $bg_colour;
-	text-align: center;
+	border-bottom: 1px solid $light_grey;
 }
 
 .one {
@@ -115,22 +107,18 @@ div {
 
 .pitch {
 	grid-area: pitch;
-	background-color: $light_grey;
-	text-align: center;
 	z-index: 0;
 }
 
 .work_form {
 	grid-area: work_form;
 	background-color: $dark_grey;
-	text-align: center;
 	color: $light_grey;
 }
 
 .footer {
 	grid-area: footer;
 	background-color: #000;
-	text-align: center;
 	color: $light_grey;
 }
 
@@ -139,8 +127,8 @@ div {
 		grid-template-areas: 'header' 'pitch' 'one' 'p1' 'two' 'p2'
 			'three' 'p3' 'four' 'p4' 'five' 'p5' 'six' 'p6'
 			'work_form' 'footer';
-		grid-auto-rows: 50px 500px 200px auto 200px auto 200px auto
-			200px auto 200px auto 200px auto 100px 20px;
+		grid-auto-rows: 50px minmax(400px, auto) 75px auto 75px auto
+			75px auto 75px auto 75px auto 75px auto 100px 20px;
 	}
 
 	.p1,
@@ -165,8 +153,8 @@ div {
 			'middle-content middle-content' 'five six'
 			'bottom-content bottom-content' 'work_form work_form'
 			'footer footer';
-		grid-auto-rows: 50px 500px 300px auto 300px auto 300px auto
-			100px 20px;
+		grid-auto-rows: 50px minmax(400px, auto) 150px auto 150px auto
+			150px auto 100px 20px;
 	}
 
 	.p1,
@@ -196,15 +184,15 @@ div {
 	}
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 	body {
 		grid-template-columns: 300px auto;
 		grid-template-areas: 'header content' 'one content'
 			'two content' 'three content' 'four content'
-			'five content' 'six content' 'work_form work_form'
-			'footer footer';
-		grid-template-rows: 50px auto auto auto auto auto auto 100px
-			20px;
+			'five content' 'six content' '... content'
+			'work_form work_form' 'footer footer';
+		grid-template-rows: 50px 150px 150px 150px 150px 150px 150px
+			auto 100px 20px;
 	}
 
 	.p1,
@@ -222,7 +210,7 @@ div {
 	/* All of them stack at the same space. need to only show one, e.g. only p1 */
 	.active {
 		display: block;
-		height: 100vh;
+		height: 100%;
 	}
 }
 
@@ -255,8 +243,150 @@ ul {
 	font-size: 14px;
 }
 
-.author {
+// .author {
+// 	line-height: 54px;
+// 	font-weight: 100;
+// 	margin-right: 10px;
+// }
+
+.top_right_link {
 	line-height: 54px;
 	font-weight: 100;
 	margin-right: 10px;
+}
+
+.toggle {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: $bg_colour;
+	line-height: 85px;
+	@media (min-width: 480px) and (max-width: 767px) {
+		line-height: 160px;
+	}
+	@media (min-width: 768px) {
+		line-height: 155px;
+	}
+	.icon {
+		width: 80px;
+		@media (min-width: 480px) and (max-width: 767px) {
+			width: 70px;
+		}
+		@media (min-width: 768px) {
+			width: 90px;
+		}
+		i {
+			padding-left: 20px;
+			font-size: 35px;
+			@media (min-width: 480px) and (max-width: 767px) {
+				padding-left: 15px;
+				font-size: 40px;
+			}
+			@media (min-width: 768px) {
+				font-size: 45px;
+			}
+		}
+	}
+	span {
+		font-weight: 100;
+		flex-grow: 1;
+		font-size: 32px;
+		@media (min-width: 480px) and (max-width: 767px) {
+			font-size: 35px;
+		}
+		@media (min-width: 768px) {
+			font-size: 35px;
+		}
+	}
+}
+
+.tab_header {
+	height: 50px;
+	p {
+		text-align: right;
+	}
+}
+
+.the_pitch {
+	background: url('./images/the_pitch.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px;
+	@media (min-width: 768px) {
+		height: 100vh;
+	}
+	.top_right_link {
+		padding-top: 8px;
+	}
+	.contact {
+		background-color: rgba(250, 50, 37, 0.85);
+		padding: 10px 20px;
+		border: 3px solid white;
+		border-radius: 50px 16px;
+		cursor: pointer;
+		color: $bg_colour;
+		font-weight: 400;
+	}
+	h1 {
+		text-align: center;
+		padding: 40px 20px 50px;
+		font-weight: 400;
+		font-size: 24px;
+		max-width: 400px;
+		margin: auto;
+		line-height: 30px;
+		@media (min-width: 768px) {
+			font-size: 32px;
+			max-width: 525px;
+			padding: 100px 20px 75px;
+			line-height: 42px;
+		}
+	}
+	h3 {
+		text-align: center;
+		font-weight: 100;
+		padding: 0 20px;
+		max-width: 400px;
+		margin: auto;
+		line-height: 25px;
+		@media (min-width: 768px) {
+			font-size: 21px;
+			max-width: 525px;
+		}
+	}
+}
+
+.our_clients {
+	h4 {
+		font-size: 28px;
+		font-weight: 100;
+		text-align: center;
+		padding: 80px 20px 40px;
+		@media (min-width: 480px) and (max-width: 767px) {
+			padding: 100px 20px 60px;
+		}
+		@media (min-width: 768px) {
+			font-size: 35px;
+		}
+	}
+
+	.client_logos {
+		display: flex;
+		flex-flow: nowrap;
+		justify-content: space-around;
+	}
+
+	.client_logo {
+		color: $text_colour;
+		font-size: 50px;
+		text-align: center;
+		flex: 1 1 auto;
+		margin: 2px;
+		@media (min-width: 480px) and (max-width: 767px) {
+			font-size: 75px;
+		}
+		@media (min-width: 768px) {
+			font-size: 35px;
+		}
+	}
 }
