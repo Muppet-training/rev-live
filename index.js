@@ -27,6 +27,12 @@ window.addEventListener('load', function() {
 				case 'four':
 					contentId = 'p4';
 					break;
+				case 'five':
+					contentId = 'p5';
+					break;
+				case 'six':
+					contentId = 'p6';
+					break;
 				default:
 					contentId = 'footer';
 			}

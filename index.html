@@ -4,21 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Faye Example</title>
-  <link rel="stylesheet" href="index.css" type="text/css">
+  <title>Xenus</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <script src="index.js"></script>
 </head>
 <body>
-  <header class="header">Xenus</header>
-  <div class="one toggle" id="one" onClick="getId(this.id)">one</div>
-  <div class="two toggle" id="two" onClick="getId(this.id)">two</div>
-  <div class="three toggle" id="three" onClick="getId(this.id)">three</div>
-  <div class="four toggle" id="four" onClick="getId(this.id)">four</div>
+  <header class="header">
+    <ul class="navbar" role="navigation">
+      <li class="logo"><img src="./images/50.png" /></li>
+      <li class="business_name"><h2>Xenus</h2></li>
+      <li class="author"><a href="http://www.tomcurphey.com">By Tom Curphey</a></li>
+   </ul>
+  </header>
+  <div class="one toggle" id="one" onClick="getId(this.id)"><i class="fas fa-code"></i> Media</div>
+  <div class="two toggle" id="two" onClick="getId(this.id)">Dev</div>
+  <div class="three toggle" id="three" onClick="getId(this.id)">Design</div>
+  <div class="four toggle" id="four" onClick="getId(this.id)">Partners</div>
+  <div class="five toggle" id="five" onClick="getId(this.id)">Articles</div>
+  <div class="six toggle" id="six" onClick="getId(this.id)">About</div>
   
-  <div class="p1 toogle-content" id="p1">p1</div>
-  <div class="p2 toogle-content" id="p2">p2</div>
-  <div class="p3 toogle-content" id="p3">p3</div>
-  <div class="p4 toogle-content" id="p4">p4</div>
-  <footer class="footer active" id="footer">Footer</footer>
+  <div class="p1 toogle-content" id="p1"> Media</div>
+  <div class="p2 toogle-content" id="p2">Dev</div>
+  <div class="p3 toogle-content" id="p3">Design</div>
+  <div class="p4 toogle-content" id="p4">Partners</div>
+  <div class="p5 toogle-content" id="p5">Articles</div>
+  <div class="p6 toogle-content" id="p6">About</div>
+
+  <div class="pitch active" id="pitch">Pitch</div>
+  <div class="work_form" >Work Form</div>
+  <footer class="footer">Footer</footer> 
+  
   </body>
 </html>
