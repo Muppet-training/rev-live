@@ -200,11 +200,11 @@ body {
 
 @media (min-width: 768px) {
   body {
-    -ms-grid-columns: 300px auto;
-        grid-template-columns: 300px auto;
+    -ms-grid-columns: 230px auto;
+        grid-template-columns: 230px auto;
         grid-template-areas: 'header content' 'one content' 'two content' 'three content' 'four content' 'five content' 'six content' '... content' 'work_form work_form' 'footer footer';
-    -ms-grid-rows: 50px 150px 150px 150px 150px 150px 150px auto 100px 20px;
-        grid-template-rows: 50px 150px 150px 150px 150px 150px 150px auto 100px 20px;
+    -ms-grid-rows: 50px 90px 90px 90px 90px 90px 90px auto 100px 20px;
+        grid-template-rows: 50px 90px 90px 90px 90px 90px 90px auto 100px 20px;
   }
   .p1,
   .p2,
@@ -282,7 +282,7 @@ ul {
 
 @media (min-width: 768px) {
   .toggle {
-    line-height: 155px;
+    line-height: 90px;
   }
 }
 
@@ -336,7 +336,7 @@ ul {
 
 @media (min-width: 768px) {
   .toggle span {
-    font-size: 35px;
+    font-size: 26px;
   }
 }
 
@@ -358,7 +358,7 @@ ul {
 
 @media (min-width: 768px) {
   .the_pitch {
-    height: 100vh;
+    height: 950px;
   }
 }
 
@@ -459,6 +459,28 @@ ul {
 @media (min-width: 768px) {
   .our_clients .client_logo {
     font-size: 35px;
+  }
+}
+
+svg {
+  width: 35px !important;
+  height: 85px !important;
+  padding-left: 10px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  svg {
+    width: 40px !important;
+    height: 160px !important;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  svg {
+    width: 45px !important;
+    height: 90px !important;
+    padding-left: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
