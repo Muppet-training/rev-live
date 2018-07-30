@@ -361,12 +361,73 @@ ul {
   }
 }
 
+.main .tab_header {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .main .tab_header {
+    display: none;
+  }
+}
+
+.toogle-content .tab_header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .toogle-content .tab_header {
+    display: block;
+  }
+}
+
+.pitch .tab_header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pitch .tab_header {
+    display: block;
+  }
+}
+
 .tab_header {
-  height: 50px;
+  height: 49px;
 }
 
 .tab_header p {
   text-align: right;
+}
+
+.tab_header .top_right_link {
+  padding-top: 8px;
+  line-height: 33px;
+}
+
+.tab_header .contact {
+  background-color: rgba(250, 50, 37, 0.85);
+  padding: 10px 20px;
+  border: 1px solid rgba(202, 2, 2, 0.85);
+  border-radius: 50px 16px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .main.tab_header {
+    display: none;
+  }
+}
+
+.top_left_link {
+  float: left;
+  font-weight: 100;
+  line-height: 50px;
+  padding: 0px 10px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .the_pitch {
@@ -381,20 +442,6 @@ ul {
   .the_pitch {
     height: 950px;
   }
-}
-
-.the_pitch .top_right_link {
-  padding-top: 8px;
-}
-
-.the_pitch .contact {
-  background-color: rgba(250, 50, 37, 0.85);
-  padding: 10px 20px;
-  border: 3px solid white;
-  border-radius: 50px 16px;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 400;
 }
 
 .the_pitch h1 {
@@ -592,6 +639,36 @@ ul {
   text-align: left;
 }
 
+.toggle-header.media-header {
+  background: url("/images/media.jpg");
+  background-position: center;
+}
+
+.toggle-header.dev-header {
+  background: url("/images/waterfall.jpg");
+  background-position: bottom;
+}
+
+.toggle-header.design-header {
+  background: url("/images/melb.jpg");
+  background-position: bottom;
+}
+
+.toggle-header.partner-header {
+  background: url("/images/sunflower.jpg");
+  background-position: center;
+}
+
+.toggle-header.articles-header {
+  background: url("/images/house.jpg");
+  background-position: center;
+}
+
+.toggle-header.about-header {
+  background: url("/images/beach.jpg");
+  background-position: top;
+}
+
 .toogle-content {
   background-color: #fff;
   border-left: 1px solid #e0e0e0;
@@ -599,8 +676,6 @@ ul {
 }
 
 .toogle-content .toggle-header {
-  background: url("/images/media.jpg");
-  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
@@ -614,7 +689,7 @@ ul {
 }
 
 .toogle-content .icon {
-  width: 120px;
+  width: 90px;
   margin: auto;
 }
 
@@ -655,6 +730,7 @@ ul {
 
 .toogle-content p.sub_description.about {
   text-align: left;
+  line-height: 25px;
 }
 
 .toogle-content svg.svg_icon {
