@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
 					contentId = 'footer';
 			}
 			let content = document.getElementById(contentId);
-			console.log(content);
+			let pitch = document.getElementById('pitch');
 			if (!content.classList.contains('active')) {
 				contentItems.forEach(function(item) {
 					if (item === content) {
@@ -50,6 +50,7 @@ window.addEventListener('load', function() {
 				});
 			} else {
 				hide(content);
+				show(pitch);
 			}
 		});
 	});
@@ -81,8 +82,6 @@ window.addEventListener('load', function() {
 			}
 			let content = document.getElementById(contentId);
 			let pitch = document.getElementById('pitch');
-			console.log(content);
-			console.log(pitch);
 			if (!content.classList.contains('active')) {
 				contentItems.forEach(function(item) {
 					if (item === content) {
