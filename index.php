@@ -76,7 +76,7 @@
 
   <div class="p1 toogle-content" id="p1">
     <div class="tab_header">
-      <p class="top_left_link back" id="back1">back</p>
+      <p class="top_left_link back" id="back1">Go Back</p>
       <p class="top_right_link"><a class="contact" href="#work-with-us">Become A Client</a></p>
     </div>
     <div class="toggle-header media-header">
@@ -494,9 +494,64 @@
     </secton>
   </div>
 
-  <div class="work_form" id="work-with-us">Work Form</div>
+  <div class="work_form" id="work-with-us">
+    <h2>Work With Us</h2>
+    <form action="contactForm.php" method="POST">
+      <div class="form_name">
+        <Label>Your Name</Label>
+        <input id="name" name="name" type="text" onBlur="checkInput(this)"/> 
+      </div>
+      <div class="form_company">
+        <Label>Company Name</Label>
+        <input id="company" name="company" type="text" onBlur="checkInput(this)"/>
+      </div>
+      <div class="form_interest">
+        <Label>What service are you interested in?</Label>
+        <div class="radio_options">
+          <input type="radio" name="interest" value="market" class="radio" ><span>Marketing & Advertising</span><br>
+          <input type="radio" name="interest" value="dev" class="radio"><span>Web Development</span><br>
+          <input type="radio" name="interest" value="design" class="radio"><span>Design</span><br>
+          <input type="radio" name="interest" value="full" class="radio"><span>Full service</span><br>
+          <input type="radio" name="interest" value="none" class="radio"><span>None I just want to chat</span>
+        </div>
+      </div>
+      <div class="form_email">
+        <Label>Contact email</Label>
+        <input id="email" name="email" type="text" onBlur="checkInput(this)"/> 
+      </div>
+      <div class="form_phone">
+        <Label>Contact Phone Number</Label>
+        <input id="phone" name="phone" type="number" onBlur="checkInput(this)"/>
+      </div>
+      <div class="form_desire">
+        <Label>What business problem are you currently facing that keeps you up at night?</Label>
+        <textarea id="desire" rows="8" name="desire" onBlur="checkInput(this)"></textarea>
+      </div>
+      <div class="form_objective">
+        <Label>What short & long term objectives, are you using to measure your success?</Label>
+        <textarea id="objective" rows="8" name="objective" onBlur="checkInput(this)"></textarea>
+      </div>
+      <div class="form_url">
+        <Label>What URL provides us with the best context to understand the problem you are trying to solve?</Label>
+        <input id="url" name="url" type="text" onBlur="checkInput(this)"/>
+      </div>
+      <div class="form_optin">
+        <Label>Consistent value builds trust.</Label>
+        <div class="checkbox_options">
+          <div class="checkbox">
+            <input type="checkbox" name="optin" class="radio" >
+          </div>
+          <div class="optin">
+            <span>Yes, I would like to recieve information that you believe would be of value to me. I expect that this information includes Articles, Videos & Services to help us grow our business</span>
+          </div>
+        </div>
+      </div>
+      <div class="form_button">
+        <button type="submit" name="submit">Send Enquiry</button>
+      </div>
+    </form>
+  </div>
   <footer class="footer">Footer</footer>
 
 </body>
-
 </html>
