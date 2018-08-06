@@ -237,7 +237,7 @@ function checkInput(e) {
 
 				var NewError = document.createElement('div');
 				NewError.innerHTML =
-					"Please double check your URL.. <br> it doesn't seem to be correct";
+					"Please double check your URL.. <br> it doesn't seem to be incorrect";
 				displayErrorMessage(NewError, name);
 			} else {
 				resetErrorMessage(name);
