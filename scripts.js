@@ -4,98 +4,110 @@ function getId(clicked_id) {
 }
 
 window.addEventListener('load', function() {
-	const backGroup = document.getElementsByClassName('back');
-	const backButtons = Array.from(backGroup);
-	const toggleGroup = document.getElementsByClassName('toggle');
-	const toggleTabs = Array.from(toggleGroup);
-	const contentGroup = document.getElementsByClassName(
-		'toogle-content'
-	);
-	const contentItems = Array.from(contentGroup);
+	const calcGroupT = document.getElementsByClassName('ct');
+	const calcButtonsT = Array.from(calcGroupT);
 
-	backButtons.forEach(function(tab) {
-		tab.addEventListener('click', function() {
-			let backId = tab.getAttribute('id');
-			switch (backId) {
-				case 'back1':
-					contentId = 'p1';
+	calcButtonsT.forEach(function(buttonT) {
+		buttonT.addEventListener('click', function() {
+			let buttonIdT = buttonT.getAttribute('id');
+
+			switch (buttonIdT) {
+				case 'chefT':
+					displayT = '$1,400';
+					infoT = 'Chef Cost Per Week';
 					break;
-				case 'back2':
-					contentId = 'p2';
+				case 'locationT':
+					displayT = '$5,321';
+					infoT = 'Venue Rent / Morgage Per Month';
 					break;
-				case 'back3':
-					contentId = 'p3';
+				case 'foodT':
+					displayT = '$2.06';
+					infoT = 'Ingredient Cost Per Recipe Serve';
 					break;
-				case 'back4':
-					contentId = 'p4';
+				case 'compareT':
+					displayT = '12%';
+					infoT = 'Compare Recipe Profits';
 					break;
-				case 'back5':
-					contentId = 'p5';
+				case 'supplyT':
+					displayT = '8%';
+					infoT = 'Find Reputable Suppliers';
 					break;
-				case 'back6':
-					contentId = 'p6';
+				case 'profitT':
+					displayT = '$16,752';
+					infoT = 'Profit Projection Per Year';
+					break;
+				case 'equalsT':
+					displayT = '$300';
+					infoT = 'Cost of the time saved per recipe';
 					break;
 				default:
-					contentId = 'footer';
+					displayT = '$16,752';
+					infoT = 'Profit Projection Per Year';
 			}
-			let content = document.getElementById(contentId);
-			let pitch = document.getElementById('pitch');
-			if (!content.classList.contains('active')) {
-				contentItems.forEach(function(item) {
-					if (item === content) {
-						show(item);
-					} else {
-						hide(item);
-					}
-				});
+
+			document.getElementById('displayT').innerHTML = displayT;
+			document.getElementById('infoT').innerHTML = infoT;
+
+			if (buttonIdT == 'compareT') {
+				document.getElementById('displayT').style.color =
+					'#4fd040';
 			} else {
-				hide(content);
-				show(pitch);
+				document.getElementById('displayT').style.color =
+					'#343434';
 			}
 		});
 	});
 
-	toggleTabs.forEach(function(tab) {
-		tab.addEventListener('click', function() {
-			let contentId = tab.getAttribute('id');
-			switch (contentId) {
-				case 'one':
-					contentId = 'p1';
+	const calcGroup = document.getElementsByClassName('cb');
+	const calcButtons = Array.from(calcGroup);
+
+	calcButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+			let buttonId = button.getAttribute('id');
+
+			switch (buttonId) {
+				case 'chef':
+					display = '$1,400';
+					info = 'Chef Cost Per Week';
 					break;
-				case 'two':
-					contentId = 'p2';
+				case 'location':
+					display = '$5,321';
+					info = 'Venue Rent / Morgage Per Month';
 					break;
-				case 'three':
-					contentId = 'p3';
+				case 'food':
+					display = '$2.06';
+					info = 'Ingredient Cost Per Recipe Serve';
 					break;
-				case 'four':
-					contentId = 'p4';
+				case 'compare':
+					display = '12%';
+					info = 'Compare Recipe Profits';
 					break;
-				case 'five':
-					contentId = 'p5';
+				case 'supply':
+					display = '8%';
+					info = 'Find Reputable Suppliers';
 					break;
-				case 'six':
-					contentId = 'p6';
+				case 'profit':
+					display = '$16,752';
+					info = 'Profit Projection Per Year';
+					break;
+				case 'equals':
+					display = '$300';
+					info = 'Cost of the time saved per recipe';
 					break;
 				default:
-					contentId = 'footer';
+					display = '$16,752';
+					info = 'Profit Projection Per Year';
 			}
-			let content = document.getElementById(contentId);
-			let pitch = document.getElementById('pitch');
-			if (!content.classList.contains('active')) {
-				contentItems.forEach(function(item) {
-					if (item === content) {
-						show(item);
-					} else {
-						hide(item);
-					}
-				});
-				if (pitch.classList.contains('active')) {
-					hide(pitch);
-				}
+
+			document.getElementById('display').innerHTML = display;
+			document.getElementById('info').innerHTML = info;
+
+			if (buttonId == 'compare') {
+				document.getElementById('display').style.color =
+					'#4fd040';
 			} else {
-				hide(content);
-				show(pitch);
+				document.getElementById('display').style.color =
+					'#343434';
 			}
 		});
 	});
@@ -109,6 +121,23 @@ function show(elem) {
 // Hide an element
 function hide(elem) {
 	elem.classList.remove('active');
+}
+
+function toggle() {
+	const toggle = document.getElementById('toggle');
+	console.log('Toggle Clicked');
+
+	let content = document.getElementById('content');
+	if (!content.classList.contains('active')) {
+		show(content);
+	} else {
+		hide(content);
+	}
+}
+
+function calc() {
+	const toggle = document.getElementById('chef');
+	console.log('Chef Clicked');
 }
 
 function validateEmail(email) {

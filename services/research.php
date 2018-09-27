@@ -10,22 +10,27 @@
   <link rel="stylesheet" href="../style.css" type="text/css">
   <script src="scripts.js"></script>
 </head>
-<body>
-  <section class="">
-    <div class="tab_header">
-      <p class="top_left_link back" id="back1">Go Back</p>
-      <p class="top_right_link"><a class="contact" href="#work-with-us">Become A Client</a></p>
-    </div>
-    <div class="toggle-header media-header">
-      <div class="icon">
-        <svg class="header_icon">
-              <use xlink:href="images/icons.svg#megaphone" />
-            </svg>
-      </div>
-    </div>
-
-    <h2>Media</h2>
-    <p class="sub_title">services</p>
-  </section>
+<body class="lead">
+  <header class="lead_header">
+    <ul class="navbar" role="navigation">
+      <li><img class="logo" src="./images/50.png" /></li>
+      <li class="business_name">
+        <h2>Xenus</h2>
+      </li>
+      <li class="top_left_link back">
+        <a href="/" >Go Back</a>  
+      </li>
+      <li class="main">
+        <div class="tab_header">
+          <p class="top_right_link"><a class="contact" href="#work-with-us">Become A Client</a></p>
+        </div>
+      </li>
+    </ul>
+  </header>
+  <section class="lead_header_image" >lead_header_image</section>
+  <section class="lead_title" >lead_title</section>
+  <section class="lead_outcome" >lead_outcome</section>
+  <section class="lead_video" >lead_video</section>
+  <section class="lead_approach" >lead_approach</section>
 </body>
 </html>
