@@ -777,7 +777,7 @@ div.equals p.top_calc {
   grid-row: 1;
 }
 .work_form .radio {
-  display: inline;
+  display: inline-flex;
   width: 40px;
   margin-left: 20px;
 }
