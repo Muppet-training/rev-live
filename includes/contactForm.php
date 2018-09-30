@@ -36,11 +36,11 @@ if(isset($_POST['submit'])){
   $url = $_POST['url'];
   $optin = $_POST['optin'];
 
-  $mailTo = 'tom@xenus.com.au';
-  $subject = 'Email From Xenus Website';
+  $mailTo = 'tom@reciperevenue.com';
+  $subject = 'Email From Recipe Revenue Website';
   $headers = 'From: '.$mailFrom;
 
-  $txt = "You recieved an email from Xenus.com.au";
+  $txt = "You recieved an email from RecipeRevenue.com";
   $txt .= "\n\r \n\r Name:".$name;
   $txt .= "\n\r Company:".$company;
   $txt .= "\n\r Phone:".$phone;
@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
   // echo "</pre>";
     mail($mailTo, $subject, $txt, $headers);
     // echo "Email Sent";
-    header('Location: ../index.php?contact=mailsent');
+    header('Location: ../mailsent');
     
   }
 }else{

@@ -27,8 +27,9 @@ a {
 	text-decoration: none;
 	border: 0;
 	color: $text_colour;
-	font-weight: 100;
+	font-weight: 200;
 	list-style-type: none;
+	// font-size: 16px;
 }
 
 section.overlay {
@@ -191,6 +192,7 @@ section.overlay {
 		h3 {
 			color: #fff;
 			padding-top: 40px;
+			font-size: 50px;
 		}
 	}
 }
@@ -214,7 +216,6 @@ div.calc {
 	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
 
 	@media (min-width: 580px) {
-		position: absolute;
 		margin-left: 20px;
 	}
 
@@ -383,6 +384,7 @@ div.equals {
 
 	p {
 		padding: 20px 0px;
+		line-height: 25px;
 	}
 
 	div.funnel_text {
@@ -485,6 +487,7 @@ div.equals {
 			li {
 				padding: 10px 0px;
 				list-style-type: disc;
+				line-height: 25px;
 			}
 		}
 
@@ -590,6 +593,9 @@ div.equals {
 			border-radius: 5px;
 			position: relative;
 			box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		img {
@@ -600,8 +606,9 @@ div.equals {
 		}
 
 		div.wrapper {
-			background-color: #fff;
+			background-color: rgba(255, 255, 255, 0.95);
 			width: 100%;
+			border-top: 1px solid #fff;
 			position: absolute;
 			bottom: 0px;
 			border-radius: 0px 0px 4px 4px;
@@ -876,7 +883,7 @@ div.equals {
 	h4 {
 		text-align: center;
 		color: #fff;
-		padding: 50px 0px;
+		padding: 50px 10px;
 		font-weight: 100;
 		font-size: 25px;
 	}

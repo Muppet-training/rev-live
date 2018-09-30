@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="public/style.css" type="text/css">
-  <script src="scripts.js"></script>
+  <script src="js/scripts.js"></script>
 </head>
 
 <body id="content" class="home">
@@ -73,26 +73,34 @@
               <li>Tom @ RecipeRevenue.com</li>    
               <li>0428 438 348</li>    
               <li class="social"> 
-                <div class="icon">
-                  <svg class="svg_icon">
-                    <use xlink:href="images/icons.svg#instagram" />
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg class="svg_icon">
-                    <use xlink:href="images/icons.svg#facebook" />
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg class="svg_icon">
-                    <use xlink:href="images/icons.svg#youtube" />
-                  </svg>
-                </div>
-                <div class="icon">
-                  <svg class="svg_icon">
-                    <use xlink:href="images/icons.svg#medium" />
-                  </svg>
-                </div>
+                <a href="http://instagram.com/reciperevenue" target="blank">
+                  <div class="icon">
+                    <svg class="svg_icon">
+                      <use xlink:href="images/icons.svg#instagram" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="http://facebook.com/reciperevenue" target="blank">
+                  <div class="icon">
+                    <svg class="svg_icon">
+                      <use xlink:href="images/icons.svg#facebook" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="http://youtube.com/reciperevenue" target="blank">
+                  <div class="icon">
+                    <svg class="svg_icon">
+                      <use xlink:href="images/icons.svg#youtube" />
+                    </svg>
+                  </div>
+                </a>
+                <a href="http://medium.com/reciperevenue" target="blank">
+                  <div class="icon">
+                    <svg class="svg_icon">
+                      <use xlink:href="images/icons.svg#medium" />
+                    </svg>
+                  </div>
+                </a>
               </li>  
             </ul>
           </div>
@@ -104,11 +112,13 @@
     <section class="nav">
         <ul>
           <li id="toggle" onClick={toggle()} >
-            <div class="icon">
-              <svg class="svg_icon">
-                <use xlink:href="images/icons.svg#menu" />
-              </svg>
-            </div>
+            <a href="#content">
+              <div class="icon">
+                <svg class="svg_icon">
+                  <use xlink:href="images/icons.svg#menu" />
+                </svg>
+              </div>
+            </a>
           </li>
           <li><h2>Recipe Revenue</h2></li>
           <li>
@@ -335,85 +345,61 @@
 
   <section class="knowledge">
     <ul class="cards">
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-        
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+    <li style="background-image: url(../images/carrots.png);">
+        <div class="wrapper">
+          <h4>
+            Who is responsible for menu pricing?
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/quality.jpg);">
+        <div class="wrapper">
+          <h4>
+            What is touch point design?
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/ste.jpg);">
+        <div class="wrapper">
+          <h4>
+            7 keys to a successful service structure
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/steps.jpg);">
+        <div class="wrapper">
+          <h4>
+            Count your steps to optimise service costs
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/supply.jpg);">
+        <div class="wrapper">
+          <h4>
+            Why Suppliers are so important in our industry
+          </h4>
+        </div>
+      
+      </li>
+      <li style="background-image: url(../images/carrots.png);">
+        <div class="wrapper">
+          <h4>
+            Have empathy before judgement!
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/takeaway.jpg);">
+        <div class="wrapper">
+          <h4>
+            Packaging or Dine in? Which is more profitable?
+          </h4>
         </div>
       </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img alt="article" src="../images/carrots.png" />
-          <div class="wrapper">
-            <h4>
-              what is touch point design?
-            </h4>
-          </div>
+      <li style="background-image: url(../images/burrito.jpg);">
+        <div class="wrapper">
+          <h4>
+            Do share menus really increase sales?
+          </h4>
         </div>
       </li>
     </ul>
@@ -578,26 +564,34 @@
             <li>Tom @ RecipeRevenue.com</li>    
             <li>0428 438 348</li>    
             <li class="social"> 
-              <div class="icon">
-                <svg class="svg_icon">
-                  <use xlink:href="images/icons.svg#instagram" />
-                </svg>
-              </div>
-              <div class="icon">
-                <svg class="svg_icon">
-                  <use xlink:href="images/icons.svg#facebook" />
-                </svg>
-              </div>
-              <div class="icon">
-                <svg class="svg_icon">
-                  <use xlink:href="images/icons.svg#youtube" />
-                </svg>
-              </div>
-              <div class="icon">
-                <svg class="svg_icon">
-                  <use xlink:href="images/icons.svg#medium" />
-                </svg>
-              </div>
+              <a href="http://instagram.com/reciperevenue" target="blank">
+                <div class="icon">
+                  <svg class="svg_icon">
+                    <use xlink:href="images/icons.svg#instagram" />
+                  </svg>
+                </div>
+              </a>
+              <a href="http://facebook.com/reciperevenue" target="blank">
+                <div class="icon">
+                  <svg class="svg_icon">
+                    <use xlink:href="images/icons.svg#facebook" />
+                  </svg>
+                </div>
+              </a>
+              <a href="http://youtube.com/reciperevenue" target="blank">
+                <div class="icon">
+                  <svg class="svg_icon">
+                    <use xlink:href="images/icons.svg#youtube" />
+                  </svg>
+                </div>
+              </a>
+              <a href="http://medium.com/reciperevenue" target="blank">
+                <div class="icon">
+                  <svg class="svg_icon">
+                    <use xlink:href="images/icons.svg#medium" />
+                  </svg>
+                </div>
+              </a>
             </li>   
           </ul>
         </div>

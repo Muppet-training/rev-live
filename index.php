@@ -18,6 +18,9 @@ switch ($request_uri[0]) {
   case '/paid':
       require 'services/paid-media.html';
       break;
+  case '/mailsent':
+      require 'services/paid-media.html';
+      break;
   // Everything else
   default:
       header('HTTP/1.0 404 Not Found');
