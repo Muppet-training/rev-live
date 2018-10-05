@@ -208,7 +208,7 @@
     <div class="wrapper">
       <div>
         <h3>Recipe Revenue</h3>
-        <p>Only contact us if you want to optimse your revenue streams</p>
+        <p>Chat to us today if you want to optimse your revenue streams</p>
       </div>
       <div>
         <a href="#work-with-us">Let's Talk Profit</a>
@@ -245,7 +245,7 @@
     <div class="funnel">
       <div class="funnel_text">
         <h3>Marketing</h3>
-        <p>Your customers attention is valuable, connect with your customers  optimally to maximise your return on investment (ROI)</p>
+        <p>Your customer's attention is valuable. Connect with your customers optimally to maximise your return on investment (ROI)</p>
         <ul class="text">
           <li>Sync contact information</li>
           <li>Refine customer demogrphics</li>
@@ -305,7 +305,7 @@
     <div class="funnel">
       <div class="funnel_text">
         <h3>Touch Point Design</h3>
-        <p>We use touch point design optimse your sales funnel strategy, by focusing on each interaction your customer has with your brand</p>
+        <p>We use touch point design to optimse your sales funnel strategy, by focusing on each interaction your customer has with your brand</p>
         <ul class="text">
           <li>Analyse your customers entire sales experience</li>
           <li>Prioritise touch points by sales conversion</li>
@@ -333,7 +333,7 @@
 
   <section class="list inform">
     <div>
-      <h3>An repeat customer is an informed customer</h3>
+      <h3>A repeat customer is an informed customer</h3>
     </div>
   </section>
 

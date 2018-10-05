@@ -357,13 +357,19 @@ div.equals {
 
 .funnel {
 	display: grid;
-	grid-template-columns: auto 205px;
-	grid-auto-rows: auto;
-	grid-template-areas: 'title funnel';
+	grid-template-columns: auto;
+	grid-auto-rows: auto auto;
+	grid-template-areas: 'title' 'funnel';
 	max-width: 800px;
 	margin: auto;
 	padding: 0px 10px;
 	min-height: 105vh;
+
+	@media (min-width: 580px) {
+		grid-template-columns: auto 205px;
+		grid-auto-rows: auto;
+		grid-template-areas: 'title funnel';
+	}
 
 	@media (min-width: 768px) {
 		grid-template-columns: auto 280px;
@@ -390,13 +396,21 @@ div.equals {
 	div.funnel_text {
 		grid-area: title;
 		padding: 20px 0px 20px 20px;
-		align-self: center;
+		align-self: end;
+
+		@media (min-width: 580px) {
+			align-self: center;
+		}
 	}
 
 	div.funnel_block {
 		grid-area: funnel;
 		display: flex;
-		align-items: center;
+		align-items: start;
+		margin: 0 auto;
+		@media (min-width: 580px) {
+			align-items: center;
+		}
 	}
 
 	div.funnel_flow {
