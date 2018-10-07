@@ -248,7 +248,7 @@
         <p>Your customer's attention is valuable. Connect with your customers optimally to maximise your return on investment (ROI)</p>
         <ul class="text">
           <li>Sync contact information</li>
-          <li>Refine customer demogrphics</li>
+          <li>Refine customer demographics</li>
           <li>Develop key brand messages</li>
           <li>Produce media to connect with customers</li>
         </ul>
